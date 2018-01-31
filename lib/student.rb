@@ -34,6 +34,7 @@ attr_reader :id
     SQL
 
     row = DB[:conn].execute(sql, name)
+    binding.pry
     self.new_from_db(row)
   end
 
