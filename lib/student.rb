@@ -39,6 +39,8 @@ attr_reader :id
     self.new_from_db(row)
   end
 
+  def update
+
   def self.create_table
     sql = <<-SQL
       CREATE TABLE IF NOT EXISTS students (
