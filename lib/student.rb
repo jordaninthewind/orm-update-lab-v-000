@@ -30,7 +30,7 @@ attr_reader :id
 
   def self.find_by_name(name)
     sql = <<-SQL
-      SELECT * WHERE name = ?
+      SELECT * FROM students WHERE name = ?
     SQL
 
     row = DB[:conn].execute(sql, name)
