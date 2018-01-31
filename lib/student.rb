@@ -39,7 +39,8 @@ attr_reader :id
   end
 
   def update
-
+    sql = "UPDATE students SET name = ?, album = ? WHERE id = ?"
+    DB[:conn].execute(sql, self.name, self.album, self.id)
   end
 
   def self.create_table
