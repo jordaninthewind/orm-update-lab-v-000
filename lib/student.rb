@@ -25,11 +25,7 @@ attr_reader :id
   end
 
   def self.new_from_db(row)
-    Student.new.tap do |student|
-      student.name = row[1]
-      student.grade = row[2]
-      student.id = row[0]
-    end
+    Student.new(row[1], row[2], row[0]
   end
 
   def self.find_by_name
