@@ -33,7 +33,8 @@ attr_reader :id
       SELECT * WHERE name = ?
     SQL
 
-    DB[:call].execute(sql, name)
+    row = DB[:call].execute(sql, name)
+    self.new_from_db(row)
   end
 
   def self.create_table
