@@ -33,7 +33,7 @@ attr_reader :id
       SELECT * WHERE name = ?
     SQL
 
-    row = DB[:call].execute(sql, name)
+    row = DB[:conn].execute(sql, name)
     self.new_from_db(row)
   end
 
