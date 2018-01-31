@@ -40,7 +40,7 @@ attr_reader :id
   end
 
   def update
-
+    
   end
 
   def self.create_table
